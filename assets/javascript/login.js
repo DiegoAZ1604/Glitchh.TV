@@ -1,3 +1,4 @@
+//Animaciones del Login
 document.getElementById("button-registrarse").addEventListener("click", register);
 document.getElementById("button-iniciar-sesion").addEventListener("click", iniciarSesion);
 
