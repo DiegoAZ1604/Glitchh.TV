@@ -61,7 +61,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <iframe src="https://embed.api.video/live/li1oLdnfUgddyOZYvpwVJ0lM" style="width: 100%; height: 350px; border: none;"></iframe>
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>

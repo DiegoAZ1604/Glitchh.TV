@@ -2,11 +2,11 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    //Inicio de Sesión
+    // Inicio de Sesión
     session_start();
 
-    //Si no se ha logueado y accede a esta página, muestra mensaje de error y destruye sesión
-    if(!isset($_SESSION['usuario'])){
+    // Si no se ha logueado y accede a esta página, muestra mensaje de error y destruye sesión
+    if (!isset($_SESSION['usuario'])) {
         echo '
             <script>
                 alert( "Debes iniciar sesión > : (" );
@@ -17,32 +17,45 @@
         die();
     }
 
-    require './vendor/autoload.php';
+    /**
+     * This script creates a live stream using the ApiVideo PHP SDK.
+     * It requires the autoload.php file from the vendor directory.
+     * The script uses the ApiVideo\Client\Client class to interact with the ApiVideo API.
+     * It also uses the ApiVideo\Client\Model\LiveStreamCreationPayload class to set the live stream properties.
+     * The Symfony\Component\HttpClient\Psr18Client class is used as the HTTP client.
+     * The script requires an API key and the API endpoint URL to connect to the ApiVideo service.
+     * The live stream is created with a name and set to public.
+     * The script retrieves the assets of the live stream, including the iframe code.
+     */
 
-    use Symfony\Component\HttpClient\Psr18Client;
+    require __DIR__ . '/vendor/autoload.php';
+
     use ApiVideo\Client\Client;
-    use ApiVideo\Client\Model\LiveStreamsApi;
+    use ApiVideo\Client\Model\LiveStreamCreationPayload;
+    use Symfony\Component\HttpClient\Psr18Client;
 
-    $apiKey = 'your API key here';
+    $apiKey = 'bSXbxNiAhzHHivCsSTnOtFfrHEwS1PTRQqDBbkYKjwN';
     $apiVideoEndpoint = 'https://ws.api.video';
 
-    $httpClient = new \Symfony\Component\HttpClient\Psr18Client();
-    $client = new ApiVideo\Client\Client(
-    $apiVideoEndpoint,
-    $apiKey,
-    $httpClient
-);
+    $httpClient = new Psr18Client();
 
-$payload =(new \ApiVideo\Client\Model\LiveStreamCreationPayload())->setName("Live Stream")->setPublic(true);
-$livestream = $client->liveStreams()->create($payload);
+    $client = new Client($apiVideoEndpoint, $apiKey, $httpClient);
+
+    $payload = (new LiveStreamCreationPayload())
+        ->setName("Glitchh-Test")
+        ->setPublic(true);
+    $livestream = $client->liveStreams()->create($payload);
+
+    $assets = $livestream->getAssets();
+    $iframe = $assets->getIframe();
 
 ?>
 
-<!--BEGIN: HTML-->
+<!-- BEGIN: HTML -->
 <!DOCTYPE html>
 <html lang="es">
 
-<!--BEGIN: head-->
+<!-- BEGIN: head -->
 
 <head>
     <meta charset="UTF-8">
@@ -50,7 +63,7 @@ $livestream = $client->liveStreams()->create($payload);
     <title>Stream</title>
     <link rel="stylesheet" href="/Glitchh/assets/styles/stream.css">
 </head>
-<!---END: Head-->
+<!-- END: Head -->
 
 <body>
     <main>
@@ -71,25 +84,15 @@ $livestream = $client->liveStreams()->create($payload);
             </div>
         </div>
 
-        <!--BEGIN: Streamer-->
+        <!-- BEGIN: Streamer -->
         <div class="content-wrapper">
             <div class="news-card">
                 <div class="video">
-                    <!--<video id="myVidPlayer" controls muted autoplay></video>-->
-                    <iframe src="https://embed.api.video/live/li2A8GajO8WPdROOGIRpmRIe?token=523081f2-8c8c-4842-8a7a-57ed9416b67b" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
-                </div>
-                <button id="snapshot" onclick="snapshot()">Snapshot</button>
-                <button id="kill-camera" onclick="start_media()">Start</button>
-                <button id="kill-camera" onclick="kill_media()">Terminate</button>
-                <div class="mycanvas">
-                    <h6>Captured snapshot</h6>
-                    <canvas></canvas>
+                    <iframe src="https://embed.api.video/live/li1oLdnfUgddyOZYvpwVJ0lM" style="width: 100%; height: 600px; border: none;"></iframe>
                 </div>
             </div>
-
         </div>
-
-        <!--END: Streamer-->
+        <!-- END: Streamer -->
     </main>
     <script src="/Glitchh/assets/javascript/stream.js"></script>
 </body>
