@@ -1,7 +1,7 @@
 <?php 
 
     //Se define el objeto conexión con parametros quemados
-    $conexion = mysqli_connect("localhost", "root", "", "login_data");
+    $conexion = mysqli_connect("db", "root", "", "login_data");
     /*
     if($conexion){
         echo 'Conexion exitosa a BDD';

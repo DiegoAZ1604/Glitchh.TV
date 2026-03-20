@@ -28,7 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glitchh.TV</title>
-    <link rel="stylesheet" href="/Glitchh/assets/styles/home.css">
+    <link rel="stylesheet" href="assets/styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -42,8 +42,8 @@
         <!-- BEGIN: Sidebar -->
         <div class="sidebar bar-block border-right" style="display:none" id="mySidebar">
             <button onclick="side_close()" class="bar-item large">Cerrar &times;</button>
-            <a href="/Glitchh/home.php" class="bar-item button">Explorar</a>
-            <a href="/Glitchh/stream.php" class="bar-item button">Iniciar Stream</a>
+            <a href="home.php" class="bar-item button">Explorar</a>
+            <a href="stream.php" class="bar-item button">Iniciar Stream</a>
             <a href="php/cerrar_sesion.php" class="bar-item button">Logout</a>
         </div>
         <!-- END: Sidebar -->
@@ -76,7 +76,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <img src="assets/images/default.jpg" alt="" class="news-card__image">
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>
@@ -91,7 +91,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <img src="assets/images/default.jpg" alt="" class="news-card__image">
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>
@@ -106,7 +106,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <img src="assets/images/default.jpg" alt="" class="news-card__image">
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>
@@ -121,7 +121,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <img src="assets/images/default.jpg" alt="" class="news-card__image">
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>
@@ -136,7 +136,7 @@
 
             <div class="news-card">
                 <a href="#" class="news-card__card-link"></a>
-                <img src="/Glitchh/assets/images/default.jpg" alt="" class="news-card__image">
+                <img src="assets/images/default.jpg" alt="" class="news-card__image">
                 <div class="news-card__text-wrapper">
                     <h2 class="news-card__title">Stream Name</h2>
                     <div class="news-card__post-date">Streamer Name</div>
@@ -152,7 +152,7 @@
         </div>
         <!--END: Cards-->
     </main>
-    <script src="/Glitchh/assets/javascript/home.js"></script>
+    <script src="assets/javascript/home.js"></script>
 </body>
 
 </html>

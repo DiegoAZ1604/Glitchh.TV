@@ -61,7 +61,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stream</title>
-    <link rel="stylesheet" href="/Glitchh/assets/styles/stream.css">
+    <link rel="stylesheet" href="assets/styles/stream.css">
 </head>
 <!-- END: Head -->
 
@@ -70,8 +70,8 @@
         <!-- BEGIN: Sidebar -->
         <div class="sidebar bar-block border-right" style="display:none" id="mySidebar">
             <button onclick="side_close()" class="bar-item large">Cerrar &times;</button>
-            <a href="/Glitchh/home.php" class="bar-item button">Explorar</a>
-            <a href="/Glitchh/stream.php" class="bar-item button">Iniciar Stream</a>
+            <a href="home.php" class="bar-item button">Explorar</a>
+            <a href="stream.php" class="bar-item button">Iniciar Stream</a>
             <a href="php/cerrar_sesion.php" class="bar-item button">Logout</a>
         </div>
         <!-- END: Sidebar -->
@@ -94,7 +94,7 @@
         </div>
         <!-- END: Streamer -->
     </main>
-    <script src="/Glitchh/assets/javascript/stream.js"></script>
+    <script src="assets/javascript/stream.js"></script>
 </body>
 
 </html>
